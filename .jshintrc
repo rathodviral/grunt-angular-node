@@ -1,0 +1,13 @@
+{
+  "curly": true,
+  "eqnull": true,
+  "eqeqeq": true,
+  "undef": true,
+  "validthis": true,
+  "node": true,
+  "globals": {
+    "angular": true,
+    "$": true,
+    "describe": true
+  }
+}

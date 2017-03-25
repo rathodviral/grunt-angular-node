@@ -1,0 +1,25 @@
+{
+    "excludeFiles": [
+        "/**/node_modules/**",
+        "/**/vendor/**",
+        "/**/build/**",
+        "/**/dist/**"
+    ],
+    "requireCamelCaseOrUpperCaseIdentifiers": {
+        "ignoreProperties": true,
+        "allowedPrefixes": [
+            "$"
+        ]
+    },
+    "requireCapitalizedConstructors": true,
+    "requireParenthesesAroundIIFE": true,
+    "validateQuoteMarks": "'",
+    "validateIndentation": 4,
+    "requireTrailingComma": false,
+    "safeContextKeyword": [
+        "vm"
+    ],
+    "maximumLineLength": {"value":140,"allExcept":["regex"]},
+    "requireSpacesInAnonymousFunctionExpression": false,
+    "requireSpacesInsideObjectBrackets": false
+}

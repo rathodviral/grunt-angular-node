@@ -1,0 +1,927 @@
+/* By Archit Soni */
+
+
+/* importing all less files */
+
+@import "fonts.less";
+@import "colorscheme.less";
+@import "mixins.less";
+
+/*Assigning the font */
+
+body,
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+em,
+i,
+span,
+small,
+ul,
+li {
+    font-family: "din-web";
+}
+
+
+/*Global styling*/
+
+.centered {
+    margin: 0 auto;
+}
+
+@media all and (max-width: 800px) {
+    .centered-sm {
+        margin: 0 auto!important;
+    }
+}
+
+.ptop15 {
+    padding-top: 15px;
+}
+
+.active-header {
+    background: @white;
+}
+
+.white {
+    color: @white;
+}
+
+.main-light-title {
+    font-size: 42px;
+    .ultralightFont();
+    padding: 20px 0px 25px 0px;
+    .gray_logo();
+}
+
+.main-title {
+    font-size: 42px;
+    padding: 20px 0px 25px 0px;
+    .gray_logo();
+}
+
+.sub-title {
+    font-size: 26px;
+    .lightFont();
+    font-weight: 300;
+    padding: 0 0 20px 0;
+    .gray_logo();
+}
+
+.btn-primary {
+    color: @white;
+    background-color: @blue_logo;
+    border-color: @blue_logo;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    padding: 10px 25px;
+    &:hover {
+        .white();
+        .bg_blue_logo();
+        border-color: @blue_logo;
+    }
+    ;
+}
+
+.form-control {
+    border-color: @blue_logo;
+    height: 42px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.btn-fb {
+    .fb_button();
+}
+
+.tab-box-wrapper {
+    .bg_white();
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.19), 0 2px 2px rgba(0, 0, 0, 0.23);
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.19), 0 2px 2px rgba(0, 0, 0, 0.23);
+    -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.19), 0 2px 2px rgba(0, 0, 0, 0.23);
+    -ms-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.19), 0 2px 2px rgba(0, 0, 0, 0.23);
+    .row-box {
+        margin-bottom: 30px;
+    }
+}
+
+.panel-heading {
+    .accordion-toggle:after {
+        /* symbol for "opening" panels */
+        font-family: 'Glyphicons Halflings';
+        /* essential for enabling glyphicon */
+        content: "\e114";
+        /* adjust as needed, taken from bootstrap.css */
+        float: right;
+        /* adjust as needed */
+        color: @blue_logo;
+        /* adjust as needed */
+    }
+    .accordion-toggle.collapsed:after {
+        /* symbol for "collapsed" panels */
+        content: "\e080";
+        /* adjust as needed, taken from bootstrap.css */
+    }
+}
+
+
+/* Navbar styling */
+
+.navbar-default {
+    background-color: @white;
+    opacity: 0.9;
+    border-color: transparent;
+    min-height: 100px;
+    padding: 25px 0 0 0;
+    @media all and (max-width: 800px) {
+        padding: 3.4% 0 0 0;
+    }
+    .navbar-header {
+        .navbar-brand {
+            width: 250px;
+            height: 70px;
+            position: relative;
+            top: -15px;
+            @media all and (max-width: 800px) {
+                width: 142px;
+                height: 70px;
+                position: relative;
+                top: -5px;
+            }
+        }
+    }
+    .navbar-nav {
+        li {
+            padding: 0px 10px;
+            @media all and (max-width: 800px) {
+                padding: 0;
+            }
+            a {
+                text-transform: uppercase;
+                color: @blue_logo;
+                font-weight: bold;
+            }
+            .dropdown-menu {
+                margin: 0 10px;
+                border: none;
+            }
+            .btn-header {
+                padding: 10px;
+                margin: 3px 0;
+                &:hover {
+                    background: @blue_logo;
+                }
+            }
+        }
+    }
+}
+
+
+/* hero section*/
+
+.hero-section {
+    padding: 15% 0;
+}
+
+
+/* how section*/
+
+.how-section {
+    padding: 10% 0;
+    background: @blue_logo;
+}
+
+
+/* why section*/
+
+.why-section {
+    padding: 10% 0;
+}
+
+
+/* feature section*/
+
+.feature-section {
+    padding: 2% 0;
+    background: @dark_gray
+}
+
+footer {
+    padding: 30px 0 20px 0;
+    background: @black;
+    position: relative;
+    width: 100%;
+    bottom: 0px;
+    @media all and (max-width: 800px) {
+        text-align: center;
+    }
+    ul {
+        padding: 0;
+        li {
+            list-style-type: none;
+            display: inline-block;
+            padding: 0px 15px;
+            a {
+                color: @white;
+                &:hover {
+                    color: @white;
+                }
+            }
+        }
+    }
+    small {
+        color: @white;
+    }
+}
+
+
+/* company page */
+
+
+/* company-hero-section*/
+
+.company-hero-section {
+    background: url(../images/hero-image.jpeg);
+    min-height: 650px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 22% 0;
+    background-blend-mode: multiply;
+    background-color: @dark_gray;
+    h1 {
+        font-size: 55px;
+        text-align: center!important;
+        .ultralightFont();
+    }
+}
+
+
+/* company-values-section*/
+
+.company-values-section {
+    padding: 10% 0;
+    h1 {
+        font-size: 48px;
+        text-align: center!important;
+        .lightFont();
+        padding: 0 0 30px 0;
+        .blue_logo();
+    }
+    p {
+        font-size: 24px;
+        line-height: 36px;
+        .ultralightFont();
+    }
+}
+
+
+/* company-values-section*/
+
+.company-story-section {
+    padding: 10% 0;
+    background: @dark_gray;
+    h1 {
+        font-size: 48px;
+        text-align: center!important;
+        .lightFont();
+        padding: 0 0 30px 0;
+        .blue_logo();
+    }
+    p {
+        font-size: 24px;
+        line-height: 36px;
+        .ultralightFont();
+    }
+}
+
+
+/* help page */
+
+
+/* help-hero-section*/
+
+.help-hero-section {
+    background: url(..`s/hero-image.jpeg);
+    min-height: 300px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 4% 0 4% 0;
+    background-blend-mode: multiply;
+    background-color: @dark_gray;
+    margin-top: 100px;
+    h1 {
+        font-size: 55px;
+        text-align: center!important;
+    }
+    input {
+        height: 46px;
+        margin: 22px 0 0 0;
+        font-size: 20px;
+        color: @blue_logo;
+    }
+    .search-icon {
+        position: absolute;
+        bottom: 12px;
+        right: 31px;
+        color: @blue_logo;
+    }
+}
+
+
+/*help-faq-section*/
+
+.help-faq-section {
+    padding: 4% 0%;
+    .panel-default {
+        border-color: @blue_logo;
+        padding: 4px 0px;
+        margin: 18px 0;
+        .panel-heading {
+            cursor: pointer;
+            background: @white;
+            border-color: @blue_logo;
+            h4 {
+                text-transform: uppercase;
+            }
+        }
+        .panel-collapse {
+            .panel-body {
+                border-color: @blue_logo;
+            }
+        }
+    }
+}
+
+
+/* contact page */
+
+
+/* contact-hero-section*/
+
+.contact-hero-section {
+    background: url(../images/team.jpeg);
+    min-height: 300px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 7% 0 6% 0;
+    background-blend-mode: multiply;
+    background-color: #cac26d;
+    margin-top: 100px;
+}
+
+
+/*contactform-section*/
+
+.contactform-section {
+    padding: 3% 0;
+    text-align: center;
+    .form-section {
+        padding: 3% 0 0 0;
+        .form-horizontal {
+            padding-bottom: 2%;
+        }
+        /*   .separator {
+            border-right: 1px solid @light_gray;
+            padding: 0px 20px 0px 0px;
+            min-height: 280px;
+            @media screen and (max-width: 900px) {
+                display: none;
+            }
+        }*/
+        .call-us-box {
+            padding: 1% 0 0 0;
+            p {
+                color: @blue_logo;
+            }
+        }
+    }
+}
+
+
+/* signup page */
+
+.signup-hero-section {
+    background: url(../images/property1.jpg);
+    min-height: 300px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+        padding: 7% 0 6% 0;
+    background-blend-mode: multiply;
+    background-color: #cac26d;
+        margin-top: 100px;
+}
+
+
+/*signup-section*/
+
+.signup-section {
+    padding: 3% 0;
+    text-align: center;
+    .form-section {
+        padding: 3% 0;
+        .sign-with-fb {
+            margin-bottom: 2%;
+        }
+        form{
+            padding-top: 2%;
+        }
+        .separator {
+            border-right: 1px solid @light_gray;
+            padding: 0px 20px 0px 0px;
+            min-height: 280px;
+            @media screen and (max-width: 900px) {
+                display: none;
+            }
+        }
+    }
+}
+
+
+/* --------------- Buyer - seller Dashboard -------------*/
+
+.sub-header {
+    margin-top: 100px;
+    border-top: 1px solid @light_gray;
+    border-bottom: 1px solid @light_gray;
+    margin-bottom: 0px;
+    min-height: 50px;
+    padding: 0!important;
+    .navbar-nav {
+        li {
+            a {
+                color: @gray_logo!important;
+            }
+            @media all and (max-width: 800px) {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+
+/* AUCTION SECTION*/
+
+.auction-section {
+    text-align: center;
+    padding: 4% 0%;
+    background: @light_gray;
+        min-height: 75vh;
+    .no-auction-label {
+        padding: 4% 0;
+        background: @blue_logo;
+        border-radius: 4px;
+        .white();
+        .ultralightFont();
+    }
+    .pick-winner-box{
+        margin-bottom: 30px;
+    }
+    .auction-detail-head {
+        padding: 4% 0;
+        .bg_white();
+        margin-bottom: 30px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.19), 0 2px 2px rgba(0, 0, 0, 0.23);
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.19), 0 2px 2px rgba(0, 0, 0, 0.23);
+        -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.19), 0 2px 2px rgba(0, 0, 0, 0.23);
+        -ms-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.19), 0 2px 2px rgba(0, 0, 0, 0.23);
+        h2 {
+            .blue_logo();
+            font-size: 50px;
+            margin-bottom: 0;
+        }
+        p {
+            .blue_logo();
+        }
+        .listing-id-box {
+            position: absolute;
+            right: 20px;
+            color: @blue_logo;
+            top: -36px;
+            @media all and (max-width: 800px) {
+                top: 75px;
+            }
+        }
+    }
+    .auction-heading {
+        background: @blue_logo;
+        margin: 0;
+        h2 {
+            font-size: 18px;
+            text-align: center;
+            margin: 20px 0;
+            .white();
+            span {
+                padding-left: 10px;
+                .white();
+                cursor: pointer;
+            }
+        }
+    }
+    .auction-box {
+        .bg_white();
+        margin: 20px 0 20px 0;
+        /*border:1px solid @blue_logo;*/
+        text-align: center;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.19), 0 2px 2px rgba(0, 0, 0, 0.23);
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.19), 0 2px 2px rgba(0, 0, 0, 0.23);
+        -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.19), 0 2px 2px rgba(0, 0, 0, 0.23);
+        -ms-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.19), 0 2px 2px rgba(0, 0, 0, 0.23);
+        transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+        border: 1px solid @gray_border;
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+            -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+            -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+            -ms-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        }
+        h3 {
+            line-height: 110px;
+        }
+        @media all and (max-width: 800px) {
+            img {
+                margin: 0 auto;
+            }
+        }
+        /* Styling for auction detail page*/
+        input#radio {
+            margin-top: 62px;
+        }
+        &.lowest-bid {
+            border: 2px solid @blue_logo!important;
+        }
+        .listing-id-box {
+            position: absolute;
+            right: 20px;
+            color: @blue_logo;
+            @media all and (max-width: 800px) {
+                bottom: 0px;
+            }
+        }
+        .auction-collapse-box {
+            background: @light_gray;
+            border-top: 1px solid @blue_logo;
+            h4 {
+                font-size: 16px;
+            }
+            p {
+                text-align: left;
+                font-size: 16px;
+            }
+        }
+    }
+    .start-auction-section {
+        padding: 2% 0 0 0;
+    }
+}
+
+
+/* --------------- Start Auction Page -------------*/
+
+
+/*--start-auction-tabs -*/
+
+.start-auction-tabs {
+    padding: 4% 0;
+    background: @light_gray;
+    .nav-tabs {
+        /*background: @blue_logo;*/
+        border: none;
+        li {
+            background: @blue_logo;
+            opacity: 0.75;
+            text-align: center;
+            margin: 0 1%;
+            &.active {
+                opacity: 1;
+                box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+                a {
+                    background: @blue_logo!important;
+                    border: 1px solid @blue_logo;
+                    .white();
+                }
+            }
+            a {
+                border-radius: 0;
+                margin-right: 0;
+                font-size: 24px;
+                text-transform: uppercase;
+                    padding: 20px 95px 0 96px;
+                span{
+                    color: #065790;
+                }
+                h2 {
+                    .white();
+                    .ultralightFont();
+                }
+                &:focus {
+                    opacity: 0.95;
+                    background: @blue_logo;
+                    border-color: @blue_logo;
+                }
+                &:hover {
+                    opacity: 1;
+                    background: @blue_logo;
+                    border-color: @blue_logo;
+                }
+            }
+            &:focus {
+                opacity: 0.95;
+                background: @blue_logo;
+                border-color: @blue_logo;
+                box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+                -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+                -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+            }
+            &:hover {
+                opacity: 1;
+                background: @blue_logo;
+                border-color: @blue_logo;
+                box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+                -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+                -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+            }
+        }
+    }
+    #sell,
+    #sell_buy,
+    #buy {
+        padding: 3% 0;
+    }
+    .tab-box-wrapper {
+        .main-title {
+            font-size: 34px;
+        }
+        h1 {
+            .gray_logo();
+        }
+        .checkbox,
+        .radio {
+            label {
+                font-size: 20px;
+                line-height: 22px;
+                .ultralightFont();
+            }
+        }
+        .row-box {
+            @media screen and (max-width: 900px) {
+                margin-bottom: 0px;
+                .form-control {
+                    margin-bottom: 20px;
+                }
+            }
+            &.services_preferred {
+                padding: 0px 50px;
+                @media screen and (max-width: 900px) {
+                    padding: 0;
+                }
+            }
+            .panel {
+                border: 1px solid @blue_logo;
+                .panel-body {
+                    padding: 15px 0px;
+                    .image-box {
+                        ul {
+                            padding: 0;
+                            margin: 0;
+                            li {
+                                list-style-type: none;
+                                display: inline-block;
+                                padding-right: 20px;
+                                margin-bottom: 20px;
+                                .image-func-link {
+                                    padding: 8px 0 20px 0;
+                                    text-align: center;
+                                    a {
+                                        padding: 9px 10px 10px 10px;
+                                        font-size: 20px;
+                                        border-radius: 50%;
+                                        position: relative;
+                                        width: 40px;
+                                        height: 40px;
+                                        line-height: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            h4 {
+                color: @gray_medium;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+
+/* MY AUCTION CONGRATS PAGE*/
+
+.congrats-section {
+    background: @light_gray;
+    padding: 3% 0;
+    .tab-box-wrapper {
+        img {
+            padding-bottom: 40px;
+        }
+        h2 {
+            font-size: 26px;
+            text-align: center;
+            color: @blue_logo;
+        }
+        h3 {
+            color: @blue_logo;
+        }
+        h4 {
+            font-size: 18px;
+            color: @blue_logo;
+            text-transform: uppercase;
+            .ultralightFont();
+            .strong {
+                text-transform: uppercase;
+            }
+            span {
+                color: @gray_logo;
+                font-size: 20px;
+                text-align: justify;
+                line-height: 34px;
+            }
+            i {
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
+
+/* NOTIFICATION PAGE STARTS*/
+
+.notification-section {
+    .auction-box {
+        h3 {
+            line-height: 32px;
+            .lightFont();
+            font-size: 18px;
+            margin: 14px 0;
+        }
+    }
+}
+
+
+/* PROFILE PAGE STARTS*/
+
+.profile-section {
+    padding: 3% 0%;
+    background: @light_gray;
+    .tab-box-wrapper {}
+}
+
+
+/* AGENT SIGNUP PAGE STARTS*/
+
+.agent-form-section {
+    padding: 3% 0%;
+    .tab-box-wrapper {
+        box-shadow: none;
+        .services_preferred {
+            padding: 0 30px;
+        }
+    }
+}
+
+
+/* SIGN UP PAYMENT CC PAGE*/
+
+.signup-payment-section {
+    .tab-box-wrapper {
+        .nav {
+            margin-bottom: 30px;
+            li{
+                a{
+                        padding: 20px 45px 0 45px;
+                }
+            }
+        }
+    }
+}
+
+
+/* AUCTIONS AGENT PAGE*/
+
+.auction-agent-section {
+    .auction-filter {
+        margin: 0 0 20px 0;
+        background: @white;
+        padding: 1% 1%;
+        .auction-range-slider {
+            padding: 0;
+            position: relative;
+            top: 10px;
+            li {
+                list-style-type: none;
+                display: inline-block;
+                span {
+                    padding: 10px 16px;
+                    position: relative;
+                    top: -5px;
+                }
+            }
+        }
+    }
+    .auction-box {
+        .favourite-link {
+            position: relative;
+            right: 33px;
+            bottom: 0px;
+            a {
+                position: absolute;
+                right: 10px;
+                margin-top: 13%;
+                span {
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+}
+
+
+/*auction_agent-detail_buy_sell page starts*/
+
+.auction-agent-detail {
+    .selling_image_tray {
+        padding: 0;
+        margin-top: 40px;
+        li {
+            list-style-type: none;
+            display: inline-block;
+        }
+    }
+    .google-map-box {
+        position: relative;
+        min-height: 300px;
+        background: url(../images/gogleMap.png);
+        top: 40px;
+    }
+    .bidInput {
+        margin: 0 0 20px 0;
+        border: 4px solid @blue_logo;
+        font-weight: bold;
+        font-size: 30px;
+        height: 50px;
+    }
+}
+
+/* Agent bids page*/
+.agent-bids{
+    .auction-box{
+        h3{
+            line-height: 96px;
+        }
+        .favourite-link{
+            a{
+                margin-top:11%;
+            }
+        }
+    }
+}
+
+/* agent profile page*/
+
+.agent-profile-tabs {
+    .nav-tabs {
+        li {
+            &.active {
+                a {
+                    background: @white;
+                    color: @white;
+                    border-color: @white;
+                }
+                h2 {
+                    color: @blue_logo!important;
+                    font-weight: bold;
+                }
+            }
+            a {
+                border-radius: 0;
+                margin-right: 0;
+                font-size: 24px;
+                text-transform: uppercase;
+                padding: 0 100px;
+            }
+        }
+    }
+}
